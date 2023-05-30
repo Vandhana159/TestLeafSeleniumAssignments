@@ -18,11 +18,9 @@ public class FindIntersection {
 	
 	public void findIntersection(int[] num_set1, int[] num_set2)
 	{
-		if(num_set1.length == num_set2.length)
-		{
 			System.out.println("Numbers found in both array are ");
 		for (int i = 0; i < num_set1.length; i++) {
-			for (int j = 0; j < num_set1.length; j++) {
+			for (int j = 0; j < num_set2.length; j++) {
 				
 				if(num_set1[i] == num_set2[j] )
 				{ 
@@ -31,9 +29,5 @@ public class FindIntersection {
 			}
 		}
 	}
-		else
-			System.out.println("Both arrays are identical");
-
 	}
 
-}
