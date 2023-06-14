@@ -19,7 +19,7 @@ public class MissingNumber {
 		}
 		List<Integer> intList = new LinkedList<Integer>();
 		intList.addAll(intSet);
-		System.out.println(intList);
+		//System.out.println(intList);
 		for(int i=0; i <intList.size(); i++)
 		{
 			if(i!= (intList.size()-1))

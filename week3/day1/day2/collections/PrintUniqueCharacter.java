@@ -25,16 +25,17 @@ import java.util.Set;
 public class PrintUniqueCharacter {
 
 	public static void main(String[] args) {
+		//Case sensitive 
 	   String input = "Vandhana";
 	   char[] name = input.toCharArray();
 	   Set<Character> setName = new LinkedHashSet<Character>();
 	   System.out.println("Input word is "+input);
-	   System.out.println("Unique characters are ");
+	   System.out.print("Unique characters are ");
 	   for(int i = 0 ; i < name.length; i++)
 	   setName.add(name[i]);
 
 	   for(Character uniq : setName)
-		   System.out.print(uniq+" ");
+		   System.out.print(uniq);
 	}
 
 }
