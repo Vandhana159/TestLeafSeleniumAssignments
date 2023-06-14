@@ -11,7 +11,7 @@ package testLeafAssignmets.week3.day2.string;
 public class Palindrome {
 
 	public static void main(String[] args) {
-		String str = "palindrome";
+		String str = "madam";
 		String reverse = "";
 		for(int i=str.length()-1; i >=0;i--)
 		{ 
