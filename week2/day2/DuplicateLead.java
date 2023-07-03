@@ -1,5 +1,6 @@
 package testLeafAssignments.week2.day2;
 
+import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,6 +10,7 @@ public class DuplicateLead {
 		//1. Launch URL "http://leaftaps.com/opentaps/control/login"
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 		//2	Enter the username
 		driver.findElement(By.xpath("//input[@name='USERNAME']")).sendKeys("demoSalesManager");
 		//3	Enter the password
@@ -51,6 +53,7 @@ public class DuplicateLead {
 			System.out.println("Successfuly created duplicate lead");
 		else
 			System.out.println("Duplicate Lead failed");
+		Thread.sleep(3000);
 		//17	Close the browser (Do not log out)
 		driver.close();
 	}

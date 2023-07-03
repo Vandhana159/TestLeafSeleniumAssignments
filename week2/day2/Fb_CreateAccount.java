@@ -34,19 +34,19 @@ public class Fb_CreateAccount {
 		driver.findElement(By.xpath("//input[@name='reg_passwd__']")).sendKeys("123456");
 		// Step 11: Handle all the three drop downs
 		//Date dropdown
-		WebElement datedropdown = driver.findElement(By.xpath("//select[@name='birthday_day']"));
-		Select date = new Select(datedropdown);
+		WebElement dateDropDown = driver.findElement(By.xpath("//select[@name='birthday_day']"));
+		Select date = new Select(dateDropDown);
 		date.selectByValue("15");
 		//Month Dropdown
-		WebElement monthdropdown = driver.findElement(By.xpath("//select[@name='birthday_month']"));
-		Select month = new Select(monthdropdown);
+		WebElement monthDropDown = driver.findElement(By.xpath("//select[@name='birthday_month']"));
+		Select month = new Select(monthDropDown);
 		month.selectByVisibleText("Sep");
 		//Year Dropdown
-		WebElement yeardropdown = driver.findElement(By.xpath("//select[@name='birthday_year']"));
-		Select year = new Select(yeardropdown);
+		WebElement yearDropDown = driver.findElement(By.xpath("//select[@name='birthday_year']"));
+		Select year = new Select(yearDropDown);
 		year.selectByValue("2009");
 		// Step 12: Select the radio button "Female"( A normal click will do for this step) 
 		driver.findElement(By.xpath("//span[@class='_5k_2 _5dba']/input[@value='1']")).click();
-		//driver.close();         		
+		driver.close();         		
 	}
 }

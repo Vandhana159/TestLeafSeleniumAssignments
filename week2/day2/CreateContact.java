@@ -1,5 +1,7 @@
 package testLeafAssignments.week2.day2;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +14,7 @@ public static void main(String[] args) throws InterruptedException {
 			//1. Launch URL "http://leaftaps.com/opentaps/control/login"
 			driver.get("http://leaftaps.com/opentaps/control/login");
 			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
 			//2. Enter UserName and Password Using Id Locator
 			WebElement userElement = driver.findElement(By.id("username"));
 			userElement.sendKeys("demoSalesManager");
@@ -54,7 +57,6 @@ public static void main(String[] args) throws InterruptedException {
 			//19. Click on update button using Xpath locator
 			driver.findElement(By.xpath("//input[@value='Update']")).click();
 			//20. Get the Title of Resulting Page.
-			Thread.sleep(3000);
 			if(driver.getTitle().equalsIgnoreCase("View Contact | opentaps CRM"))
 				System.out.println(driver.getTitle());
 			else
