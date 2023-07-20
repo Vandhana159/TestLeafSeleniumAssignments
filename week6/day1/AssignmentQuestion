@@ -1,0 +1,70 @@
+TestNg Assignment
+Week 6 Day1 
+============
+
+ TestNg DataProvider Assignment 
+. Dynamic data parametrization
+     *Apply  for all the leaftaps testcases , wherever applicable
+    - Create new excel document for the test cases that require the multiple data to operate on.
+    - Implement the Data parametrization for all the required testcases through the DataProvider
+     class to read the data from the excel sheet
+
+Cucumber Assignment
+Week 6 Day2
+============
+Cucumber :
+*Create a separate Feature file for all the 5 testcases of leaftaps and implement it
+Implement *Scenario Outline  (Wherever Applicable)
+Try to apply all your learnings in your script
+
+
+
+
+
+
+Steps to implement DataProvider:
+
+1)Identify the data that are need to be dynamic for particular testcase(Cn,fn,Ln)
+2)Create a method to pass data with @DataProvider annotation
+// step:1 declare a 2D String array
+		// first []-represent row
+		// second []- represent column
+		String[][] data = new String[2][4];
+
+		// step2 :assingn data for 2D array
+		// index start with 0
+3)Create input array with number of rows and columns
+   -Index starts with 0
+4)return the data to the testcase
+5)@Test(dataProvider)
+6)Pass all the datas as input arguments
+7)Finally,replace all the hardcoded data with the arguments
+
+Step to Integrate ReadExcle with DataProvider
+==============================================
+1.Declare a String[][] variable in ReadExcle program with dimensions a rowcount and Cellcount.
+2.Save data into the 2D array by having data[i-1][j]=cell.getStringCellValues
+3.add return statement and chnage void to return type.
+4.keyword static retain and remove String[] args  
+5.Rename the method name into meaningful name
+In Createlead Class
+@DataProvider
+excleclass.methodname();
+return excleclass.methodname()
+
+
+
+
+
+● Steps to Create File :-
+After Creating features package, Mouseover on it & Right Click --> New --> Other... --> Select File under General Folder --> Click Next
+      ● Set File name as Login.feature & Click Finish
+      ● U can see a new file Created under features package like slice of Cucumber IMG 
+Then it's Fine👍🏻🙂
+
+Classroom:
+-----------
+1. Create StepDefinition class under steps package and implement methods for each steps
+2. Integrate the methods with steps using cucumber annotation
+3. Create a RunnerClass extends AbstractTestNGCucumberTests under runner package
+4. Apply @CucumberOption with featues, glue
